@@ -7,9 +7,9 @@ using SiteRando.Models;
 
 namespace SiteRando.Data
 {
-    public class MvcHikeContext : DbContext
+    public class Context : DbContext
     {
-        public MvcHikeContext(DbContextOptions<MvcHikeContext> options) : base(options)
+        public Context(DbContextOptions<Context> options) : base(options)
         {
 
         }

@@ -8,27 +8,44 @@ namespace SiteRando.Models
 {
     public class Hike
     {
+        public Hike(int id, string title, int distance, int time, int elevation, int difficult, string startDetails, string endDetails, string details, string map)
+        {
+            Id = id;
+            Title = title;
+            Distance = distance;
+            Time = time;
+            Elevation = elevation;
+            Difficult = difficult;
+            StartDetails = startDetails;
+            EndDetails = endDetails;
+            Details = details;
+            Map = map;
+        }
+
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
 
         [Required]
+        //In meters
         public int Distance { get; set; }
 
         [Required]
+        //In minutes
         public int Time { get; set; }
 
         [Required]
+        //In meters
         public int Elevation { get; set; }
 
         [Required]
         public int Difficult { get; set; }
 
         [Required]
-        public string Startdetails { get; set; }
+        public string StartDetails { get; set; }
 
         [Required]
-        public string Enddetails { get; set; }
+        public string EndDetails { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
