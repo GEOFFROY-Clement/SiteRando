@@ -40,6 +40,7 @@ namespace SiteRando
                 app.UseExceptionHandler("/Home/Error");
             }
             context.Database.Migrate();
+
             app.UseStaticFiles();
 
             app.UseRouting();

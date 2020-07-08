@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SiteRando.Models
 {
+    [Table("Hike")]
     public class Hike
     {
         public Hike(int id, string title, int distance, int time, int elevation, int difficult, string startDetails, string endDetails, string details, string map)

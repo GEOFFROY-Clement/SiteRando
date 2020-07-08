@@ -9,8 +9,8 @@ using SiteRando.Data;
 namespace SiteRando.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200708133136_MyBaseMigration")]
-    partial class MyBaseMigration
+    [Migration("20200708142248_migration")]
+    partial class migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,7 +61,7 @@ namespace SiteRando.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Hikes");
+                    b.ToTable("Hike");
                 });
 #pragma warning restore 612, 618
         }

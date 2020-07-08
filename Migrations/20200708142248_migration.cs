@@ -2,12 +2,12 @@
 
 namespace SiteRando.Migrations
 {
-    public partial class MyBaseMigration : Migration
+    public partial class migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Hikes",
+                name: "Hike",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -24,14 +24,14 @@ namespace SiteRando.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Hikes", x => x.Id);
+                    table.PrimaryKey("PK_Hike", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Hikes");
+                name: "Hike");
         }
     }
 }

@@ -59,7 +59,7 @@ namespace SiteRando.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Hikes");
+                    b.ToTable("Hike");
                 });
 #pragma warning restore 612, 618
         }
