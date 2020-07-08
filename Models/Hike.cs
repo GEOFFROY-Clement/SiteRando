@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SiteRando.Models
 {
     [Table("Hike")]
-    public class Hike
+    public class Hike 
     {
         public Hike(int id, string title, int distance, int time, int elevation, int difficult, string startDetails, string endDetails, string details, string map)
         {
@@ -55,5 +55,10 @@ namespace SiteRando.Models
 
         [Required]
         public string Map { get; set; }
+        public override string ToString()
+        {
+            return Title;
+        }
     }
+   
 }
