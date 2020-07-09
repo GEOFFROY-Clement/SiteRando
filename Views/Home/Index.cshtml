@@ -7,18 +7,12 @@
         <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
         <ul>
-            @foreach (var item in ViewBag.randoLast)
+            @foreach (var item in ViewBag.hikes)
             {
                 <li>@item.Title</li>
 
             }          
         </ul>        
-        <ul>
-            @foreach (var items in ViewBag.randoFav)
-            {
-                <li>@items.Title</li>
-            }
-        </ul>
-
-        @ViewBag.hikes.Find(1).Title
+        
+        
     </div>
