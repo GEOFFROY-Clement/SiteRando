@@ -24,8 +24,14 @@ namespace SiteRando.Controllers
             randos.Add(new Hike(1, "test", 10, 50, 20, 3, "totot", "tata", "je fais ce que je veux", "Marseille"));
             randos.Add(new Hike(2, "Rando préférée", 1000, 280, 120, 2, "nous commençons sur la place de la mairie", "nous finissons au bar du coin", "a boire a boire a boire", "Thonon les bains"));
             randos.Add(new Hike(3, "Rando que je deteste", 1000, 280, 120, 2, "nous commençons sur la place de la mairie", "nous finissons au bar du coin", "a boire a boire a boire", "Thonon les bains"));
-           
-            return View(randos);
+            ViewBag.randoLast = randos;
+
+            List<Hike> randosFav = new List<Hike>();
+            randosFav.Add(new Hike(1, "Je suis ", 10, 50, 20, 3, "totot", "tata", "je fais ce que je veux", "Marseille"));
+            randosFav.Add(new Hike(2, "Un excellent", 1000, 280, 120, 2, "nous commençons sur la place de la mairie", "nous finissons au bar du coin", "a boire a boire a boire", "Thonon les bains"));
+            randosFav.Add(new Hike(3, "Developpeur", 1000, 280, 120, 2, "nous commençons sur la place de la mairie", "nous finissons au bar du coin", "a boire a boire a boire", "Thonon les bains"));
+            ViewBag.randoFav = randosFav;
+            return View();
         }
 
         public IActionResult Privacy()
