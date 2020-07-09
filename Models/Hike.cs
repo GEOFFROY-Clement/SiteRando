@@ -57,7 +57,7 @@ namespace SiteRando.Models
         public string Map { get; set; }
         public override string ToString()
         {
-            return Title;
+            return Title.ToString();
         }
     }
    

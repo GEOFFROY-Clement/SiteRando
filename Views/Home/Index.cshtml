@@ -1,13 +1,15 @@
-﻿@{
+﻿@model IEnumerable<SiteRando.Models.Hike>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <ul>
-        <li>@ViewBag.hike</li>
-        <li>@ViewBag.hike1</li>
-        <li>@ViewBag.hike2</li>    
-    </ul>   
+   @foreach (var item in Model)
+   {
+       <div>
+       @item.Title
+       </div>
+   }
 </div>
